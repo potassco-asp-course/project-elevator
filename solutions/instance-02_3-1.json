@@ -1,0 +1,61 @@
+{
+ "Solver": "clingo version 5.4.0",
+ "Input": [
+  "elevator.lp",
+  "instances/instance-02_3-1.lp"
+ ],
+ "Call": [
+  {},
+  {},
+  {},
+  {},
+  {},
+  {
+   "Witnesses": [
+    {
+     "Value": [
+      "holds(at(elevator(1),3),1)",
+      "holds(at(elevator(1),2),3)",
+      "holds(at(elevator(1),1),4)",
+      "holds(at(elevator(1),3),2)",
+      "holds(at(elevator(1),1),5)",
+      "holds(at(elevator(1),2),0)",
+      "do(elevator(1),move(-1),3)",
+      "do(elevator(1),move(-1),4)",
+      "do(elevator(1),move(1),1)",
+      "do(elevator(1),serve,2)",
+      "do(elevator(1),serve,5)",
+      "holds(request(deliver(1),3),1)",
+      "holds(request(deliver(1),3),0)",
+      "holds(request(call(up),1),1)",
+      "holds(request(call(up),1),4)",
+      "holds(request(call(up),1),0)",
+      "holds(request(call(up),1),2)",
+      "holds(request(call(up),1),3)"
+     ],
+     "Costs": [
+      3
+     ]
+    }
+   ]
+  }
+ ],
+ "Result": "OPTIMUM FOUND",
+ "Models": {
+  "Number": 2,
+  "More": "no",
+  "Optimum": "yes",
+  "Optimal": 1,
+  "Costs": [
+   3
+  ]
+ },
+ "Calls": 6,
+ "Time": {
+  "Total": 0.012,
+  "Solve": 0.0,
+  "Model": 0.0,
+  "Unsat": 0.0,
+  "CPU": 0.012
+ }
+}
