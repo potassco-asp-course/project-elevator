@@ -6,7 +6,7 @@ import json
 import time
 
 
-CLINGO = "/home/npoi/miniconda3/bin/clingo"
+CLINGO = "/usr/share/miniconda/bin/clingo"
 INSTANCES = "instances/"
 REF_ENC = "checker.lp"
 DUMMY = "dummy.lp"
