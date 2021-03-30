@@ -1,8 +1,8 @@
 {
  "Solver": "clingo version 5.4.0",
  "Input": [
-  "elevator.lp",
-  "instances/instance-03_5-1.lp"
+  "till.lp",
+  "instances1/instance-03_5-1.lp"
  ],
  "Call": [
   {},
@@ -15,27 +15,27 @@
    "Witnesses": [
     {
      "Value": [
-      "holds(at(elevator(1),5),1)",
-      "holds(at(elevator(1),4),3)",
-      "holds(at(elevator(1),3),4)",
-      "holds(at(elevator(1),2),5)",
-      "holds(at(elevator(1),5),2)",
-      "holds(at(elevator(1),2),6)",
       "holds(at(elevator(1),4),0)",
-      "do(elevator(1),move(-1),3)",
-      "do(elevator(1),move(-1),4)",
-      "do(elevator(1),move(-1),5)",
-      "do(elevator(1),move(1),1)",
-      "do(elevator(1),serve,2)",
-      "do(elevator(1),serve,6)",
-      "holds(request(deliver(1),5),1)",
       "holds(request(deliver(1),5),0)",
-      "holds(request(call(up),2),1)",
-      "holds(request(call(up),2),5)",
       "holds(request(call(up),2),0)",
+      "holds(request(deliver(1),5),1)",
+      "holds(request(call(up),2),1)",
+      "do(elevator(1),move(1),1)",
+      "holds(at(elevator(1),5),1)",
+      "do(elevator(1),serve,2)",
+      "holds(at(elevator(1),5),2)",
       "holds(request(call(up),2),2)",
+      "holds(at(elevator(1),4),3)",
       "holds(request(call(up),2),3)",
-      "holds(request(call(up),2),4)"
+      "do(elevator(1),move(-1),3)",
+      "holds(at(elevator(1),3),4)",
+      "holds(request(call(up),2),4)",
+      "do(elevator(1),move(-1),4)",
+      "holds(at(elevator(1),2),5)",
+      "holds(request(call(up),2),5)",
+      "do(elevator(1),move(-1),5)",
+      "do(elevator(1),serve,6)",
+      "holds(at(elevator(1),2),6)"
      ],
      "Costs": [
       4
@@ -56,10 +56,10 @@
  },
  "Calls": 7,
  "Time": {
-  "Total": 0.013,
+  "Total": 0.006,
   "Solve": 0.0,
   "Model": 0.0,
   "Unsat": 0.0,
-  "CPU": 0.013
+  "CPU": 0.006
  }
 }

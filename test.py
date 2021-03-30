@@ -18,7 +18,7 @@ def call_clingo(input_names, timeout, expected):
     if expected == "SAT":
         cmd = [CLINGO, "--warn=no-atom-undefined", "--warn=no-file-included", "--warn=no-operation-undefined", "--warn=no-variable-unbounded", "--warn=no-global-variable", "--outf=2"] + input_names
     else:
-        cmd = [CLINGO, "--warn=no-atom-undefined", "--warn=no-file-included", "--warn=no-operation-undefined", "--warn=no-variable-unbounded", "--warn=no-global-variable", "--outf=2", "--opt-mode=optN", "--quiet=1"] + input_names
+        cmd = ["clingo", "--warn=no-atom-undefined", "--warn=no-file-included", "--warn=no-operation-undefined", "--warn=no-variable-unbounded", "--warn=no-global-variable", "--outf=2", "--opt-mode=optN", "--quiet=1"] + input_names
     start = time.time()
     output = run(cmd, stdout=PIPE, stderr=PIPE, timeout=timeout)
     end = time.time()
@@ -68,6 +68,10 @@ def test(enc, inst, timeout, expected):
         for s in ref_solutions:
             s.sort()
         ref_solutions.sort()
+        print(solutions[-1])
+        print(33*"*")
+        for s in ref_solutions:
+            print(s)
         return solutions[-1] in ref_solutions, time
 
 def main():

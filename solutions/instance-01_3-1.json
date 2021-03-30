@@ -1,8 +1,8 @@
 {
  "Solver": "clingo version 5.4.0",
  "Input": [
-  "elevator.lp",
-  "instances/instance-01_3-1.lp"
+  "till.lp",
+  "instances1/instance-01_3-1.lp"
  ],
  "Call": [
   {},
@@ -11,13 +11,13 @@
    "Witnesses": [
     {
      "Value": [
-      "holds(at(elevator(1),1),1)",
-      "holds(at(elevator(1),1),2)",
       "holds(at(elevator(1),2),0)",
-      "do(elevator(1),move(-1),1)",
-      "do(elevator(1),serve,2)",
+      "holds(request(call(up),1),0)",
       "holds(request(call(up),1),1)",
-      "holds(request(call(up),1),0)"
+      "do(elevator(1),move(-1),1)",
+      "holds(at(elevator(1),1),1)",
+      "do(elevator(1),serve,2)",
+      "holds(at(elevator(1),1),2)"
      ],
      "Costs": [
       1
